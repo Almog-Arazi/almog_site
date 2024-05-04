@@ -1,7 +1,6 @@
 # Almog Site
 
 That is my Portfolio site 
-https://almog-arazi.github.io/almog_site/
 
 ## HTML Pages
 
