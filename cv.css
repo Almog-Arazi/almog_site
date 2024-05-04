@@ -27,10 +27,7 @@
     background-position: 0% 50%;
   }
 }
-#image_almog{
-border-radius: 50%;
-margin-top: 100px;
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -128,11 +125,6 @@ h2 {
    height: auto;
   }
 
-  #image_almog{
-    border-radius: 50%;
-    height: 125px;
-    width: 125px;
-    }
 
   .grid-container > .publication_text {
     margin-bottom: 2em;

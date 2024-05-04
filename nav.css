@@ -35,7 +35,7 @@ header {
   position: fixed;
   z-index: 1300;
   width: 100%;
-  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Make the checkbox invisible, as we will click on the label and not the checkbox.
@@ -78,7 +78,8 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-  border-bottom: 1px solid var(--border);
+  -webkit-box-shadow: 0 14px 20px -8px rgba(14,12,27,.05);
+  box-shadow: 0 14px 20px -8px rgba(14,12,27,.05)
 }
 
 nav ul {
