@@ -34,7 +34,288 @@
         <noscript>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
         </noscript>
+        <style>
+            .skills-section {
+                background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #2d3748;
+                margin-bottom: 3rem;
+                position: relative;
+            }
+            
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 5px;
+                background: linear-gradient(90deg, #007bff, #00d4ff);
+                border-radius: 3px;
+            }
+            
+            .skill-category {
+                background: white;
+                border-radius: 20px;
+                padding: 2rem;
+                height: 100%;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .skill-category:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            }
+            
+            .skill-category h3 {
+                color: #2d3748;
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            
+            .skill-category h3 i {
+                margin-right: 10px;
+                color: #007bff;
+            }
+            
+            .skill-items {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .skill-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                background: #f8fafc;
+                border-radius: 12px;
+                transition: transform 0.2s ease;
+            }
+            
+            .skill-item:hover {
+                transform: translateY(-3px);
+                background: #f1f5f9;
+            }
+            
+            .skill-item i {
+                font-size: 1.5rem;
+            }
+            
+            .skill-item span {
+                color: #4a5568;
+                font-weight: 500;
+            }
+            
+            @media (max-width: 768px) {
+                .skill-category {
+                    padding: 1.5rem;
+                }
+            
+                .skill-items {
+                    gap: 0.75rem;
+                }
+            
+                .skill-item {
+                    padding: 0.4rem 0.8rem;
+                }
+            }
 
+
+            .contact-section {
+                background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+                padding: 80px 0;
+            }
+
+            .contact-wrapper {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .contact-card {
+                background: white;
+                border-radius: 20px;
+                padding: 3rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .section-title {
+                color: #2d3748;
+                font-size: 2.5rem;
+                font-weight: 700;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 4px;
+                background: linear-gradient(90deg, #007bff, #00d4ff);
+                border-radius: 2px;
+            }
+
+            .contact-image-wrapper {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .contact-image {
+                max-width: 300px;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .contact-form {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            .form-group.full-width {
+                grid-column: span 2;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: #4a5568;
+                font-weight: 500;
+            }
+
+            .input-group {
+                position: relative;
+            }
+
+            .input-icon {
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #a0aec0;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 0.75rem 1rem 0.75rem 2.5rem;
+                border: 2px solid #e2e8f0;
+                border-radius: 10px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+                outline: none;
+            }
+
+            textarea.form-control {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            .submit-button {
+                width: 100%;
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 10px;
+                background: linear-gradient(45deg, #007bff, #00d4ff);
+                color: white;
+                font-size: 1.1rem;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .submit-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+            }
+
+            .submit-button i {
+                transition: transform 0.3s ease;
+            }
+
+            .submit-button:hover i {
+                transform: translateX(5px);
+            }
+
+            @media (max-width: 768px) {
+                .contact-card {
+                    padding: 2rem;
+                }
+
+                .form-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .form-group.full-width {
+                    grid-column: span 1;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+            }
+              .popup-message {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 15px;
+                    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    display: none;
+                    text-align: center;
+                    animation: fadeIn 0.3s ease-out;
+                }
+
+                .popup-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0,0,0,0.5);
+                    display: none;
+                    z-index: 999;
+                }
+
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translate(-50%, -60%); }
+                    to { opacity: 1; transform: translate(-50%, -50%); }
+                }
+            </style>
 </head>
 <body>
         <header class="gradient-background2" >
@@ -146,71 +427,130 @@
                       </div>
                     </div>
                     <div class="col-md-4 justify-content-center list-unstyled d-flex">
-                        <img  loading="lazy" src="./images/a2.png" alt="logo" width="400">
+                        <img  loading="lazy" src="images\almog_image.png" alt="logo" width="400">
                     </div>
                   </div>
                 </div>
             </section>
         </div>     
-        
-              <section class="bg-light py-5">
-                <div class="container">
-                    <h2 class="text-center mb-5" style="color: #333;">My Skills</h2>
-                    <div class="row row-cols-1 row-cols-md-3 g-4 text-center">              
-                        <div class="col">
-                            <div class="card h-100 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #007bff;">Programming Languages</h5>
-                                    <p class="card-text">
-                                        <i class="fab fa-c fa-2x" style="color: #a8b9cc;"></i> <span style="color: #555;">C</span>
-                                        <i class="fab fa-java fa-2x" style="color: #f89820;"></i> <span style="color: #555;">Java</span>
-                                        <i class="fab fa-js-square fa-2x" style="color: #f0db4f;"></i> <span style="color: #555;">JavaScript</span>
-                                        <i class="fab fa-python fa-2x" style="color: #4B8BBE;"></i> <span style="color: #555;">Python</span>
-                                    </p>
-                                </div>
-                            </div>
+        <section class="skills-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title">Technical Skills</h2>
+        <div class="row g-4">
+            <!-- Programming Languages -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python" style="color: #4B8BBE;"></i>
+                            <span>Python</span>
                         </div>
-                        <div class="col">
-                            <div class="card h-100 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #28a745;">Web Development</h5>
-                                    <p class="card-text">
-                                        <i class="fab fa-html5 fa-2x" style="color: #e34f26;"></i> <span style="color: #555;">HTML5</span>
-                                        <i class="fab fa-css3-alt fa-2x" style="color: #264de4;"></i> <span style="color: #555;">CSS3</span>
-                                        <i class="fab fa-bootstrap fa-2x" style="color: #563d7c;"></i> <span style="color: #555;">Bootstrap</span>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java" style="color: #f89820;"></i>
+                            <span>Java</span>
                         </div>
-                        <div class="col">
-                            <div class="card h-100 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #6c757d;">Tools & Platforms</h5>
-                                    <p class="card-text">
-                                        <i class="fab fa-aws fa-2x" style="color: #ff9900;"></i> <span style="color: #555;">AWS</span>
-                                        <i class="fab fa-git-alt fa-2x" style="color: #f05032;"></i> <span style="color: #555;">GIT</span>
-                                        <i class="fab fa-linux fa-2x" style="color: #fcc624;"></i> <span style="color: #555;">Linux</span>
-                                        <i class="fab fa-arduino fa-2x" style="color: #4B8BBE;"></i> <span style="color: #555;">Arduino</span>
-                                        <i class="fab fa-ionic fa-2x" style="color: #3880ff;"></i> <span style="color: #555;">Ionic</span>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code" style="color: #659AD2;"></i>
+                            <span>C/C++</span>
                         </div>
-                        <div class="col">
-                            <div class="card h-100 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="color: #ffc107;">Design & Prototyping</h5>
-                                    <p class="card-text">
-                                        <i class="fab  fa-figma fa-2x" style="color: #f24e1e;"></i> <span style="color: #555;">Figma</span>
-                                        <i class="fab fa-canva fa-2x" style="color: #00c4cc;"></i> <span style="color: #555;">Canva</span>
-                                        <i class="fab fa-photoshop fa-2x" style="color: #ff0000;"></i> <span style="color: #555;">Adobe</span>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js" style="color: #f0db4f;"></i>
+                            <span>JavaScript</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Web Development -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5" style="color: #e34f26;"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react" style="color: #61DAFB;"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js" style="color: #68A063;"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js" style="color: #000;"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-aws" style="color: #ff9900;"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt" style="color: #f05032;"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux" style="color: #fcc624;"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-arduino" style="color: #00979D;"></i>
+                            <span>Arduino</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-figma" style="color: #f24e1e;"></i>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specialized Skills -->
+            <div class="col-lg-6 mb-4">
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Specialized Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database" style="color: #336791;"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-eye" style="color: #5C3EE8;"></i>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot" style="color: #FF6B6B;"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask" style="color: #000;"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator" style="color: #013243;"></i>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             <div id="page-wrap""> 
               
               <section id="INTRO">
@@ -234,42 +574,54 @@
     </div>
   
     
-    <section class=" py-5">
-            <div class="container my-5">
-                <div class="position-relative p-5 text-center text-muted bg-body border shadow-lg border-dashed rounded-5">
-                    <section class="text-center py-5">
-                        <div class="p-2 text-center ">
-                            <img src="images/index-image.jpeg" alt="Contact Image" class="img_contact mb-4" style=" height: auto;">
-                        <!-- option 2  <img src=  https://i.ibb.co/f46Wb8c/b26bc9e9-b4ed-4ca0-8e64-5fa0cda56ee6.jpg alt="Contact Image" class="img_contact mb-4" style=" height: auto;"> -->
-                            <div class="row justify-content-center">
-                                <div class="col-md-7 mb-5 mb-md-0">
-                                    <form class="form" id="contact-form" method="post" >
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="mb-4">
-                                                        <label class="form-label" for="name">Your name *</label>
-                                                        <input class="form-control" type="text" name="name" id="name" placeholder="Enter your name" required="required">
-                                                    </div>
-                                                </div>
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <h2 class="section-title text-center mb-5">Get In Touch</h2>
                     
-                                            </div>
-                                            <div class="mb-4">
-                                                <label class="form-label" for="email">Your email *</label>
-                                                <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email" required="required">
-                                            </div>
-                                            <div class="mb-4">
-                                                <label class="form-label" for="message">Your message for me *</label>
-                                                <textarea class="form-control" rows="4" name="message" id="message" placeholder="Enter your message" required="required"></textarea>
-                                            </div>
-                                            <button class="btn btn-outline-primary" type="submit">Send message</button>
-                                        </div>
-                                    </form>
+                    <div class="contact-content">
+                        <div class="contact-image-wrapper">
+                            <img src="images/index-image.jpeg" alt="Contact Image" class="contact-image">
+                        </div>
+    
+                        <form class="contact-form" method="POST">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Full Name</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input class="form-control" type="text" name="name" id="name" placeholder="Enter your name" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="message">Message</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-comment-alt input-icon"></i>
+                                        <textarea class="form-control" rows="4" name="message" id="message" placeholder="What would you like to tell me?" required></textarea>
+                                    </div>
+                                </div>
+                        
+                                <div class="form-group full-width">
+                                    <button class="submit-button" type="submit">
+                                        <span>Send Message</span>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                </div>   
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -284,7 +636,62 @@
         </a>
     </footer>
 
-    <script src="./scrollreveal.min.js"></script>
-    <script src="./main.js"></script>
+
+
+            <!-- Popup Message -->
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-message" id="popupMessage">
+            <i class="fas fa-check-circle" style="font-size: 3rem; color: #28a745; margin-bottom: 1rem;"></i>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully.</p>
+            <button onclick="closePopup()" class="btn btn-primary mt-3">Close</button>
+        </div>
+
+
+        <!-- Scripts -->
+        <script src="./scrollreveal.min.js"></script>
+        <script src="./main.js"></script>
+        <script>
+        function showPopup() {
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('popupMessage').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('popupMessage').style.display = 'none';
+        }
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            
+            // Create FormData object
+            const formData = new FormData(form);
+            
+            // Send form data using fetch
+            fetch('https://formsubmit.co/ajax/almogx123@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+            .then(response => response.json())
+            .then(data => {
+                showPopup();
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popupOverlay').addEventListener('click', closePopup);
+        </script>
+
     </body>
 </html>
