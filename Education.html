@@ -80,59 +80,261 @@
 </header>
 
 <div class="clear"></div><div class="clear"></div>
-<section id="INTRO" class="bg-light py-5">
+
+<style>
+    .education-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .education-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/><rect fill="rgba(255,255,255,0.05)" x="50" y="50" width="50" height="50"/></svg>');
+        opacity: 0.3;
+    }
+    
+    .education-content {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .education-title {
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .education-subtitle {
+        color: rgba(255,255,255,0.9);
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .edu-card {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        margin-top: -50px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 3rem;
+    }
+    
+    .grade-item {
+        padding: 15px 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.2s ease;
+    }
+    
+    .grade-item:hover {
+        transform: translateX(5px);
+    }
+    
+    .grade-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .achievement-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: white;
+        border-radius: 20px;
+        font-weight: 600;
+        margin: 5px;
+        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+    }
+    
+    .greenies-section {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        padding: 3rem;
+        border-radius: 20px;
+        color: white;
+        margin-top: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+        .education-title {
+            font-size: 2rem;
+        }
+        .edu-card {
+            padding: 2rem 1rem;
+        }
+    }
+</style>
+
+<section id="INTRO">
+    <!-- Hero Section -->
+    <div class="education-hero">
+        <div class="container education-content text-center">
+            <h1 class="education-title">Academic Journey</h1>
+            <p class="education-subtitle">Excellence in Computer Science & Leadership</p>
+        </div>
+    </div>
+    
+    <!-- Education Section -->
     <div class="container">
-        <h1 class="text-center mb-5 pb-3 border-bottom" data-aos="fade-down">My Professional Journey</h1>
-        <div class="row">
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100 shadow-sm hover-card">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-graduation-cap fa-2x text-primary me-3"></i>
-                            <h2 class="card-title h3 mb-0">Education</h2>
+        <div class="edu-card">
+            <h2 class="text-center mb-5" style="color: #2d3748; font-weight: 700; font-size: 2rem;">
+                <i class="fas fa-graduation-cap" style="color: #667eea;"></i> Education
+            </h2>
+            
+            <!-- Reichman University -->
+            <div class="mb-5">
+                <div style="background: white; padding: 3rem; border-radius: 15px; border: 2px solid #667eea;">
+                    <h3 style="color: #667eea; font-weight: 700; margin-bottom: 1rem; text-align: center; font-size: 1.8rem;">
+                        🎓 Reichman University
+                    </h3>
+                    <p style="color: #666; margin-bottom: 1rem; text-align: center; font-size: 1.1rem;">
+                        <strong>Bachelor of Computer Science</strong><br>
+                        IDC Herzliya | 2021 - 2024
+                    </p>
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <span style="display: inline-block; padding: 12px 30px; background: linear-gradient(45deg, #667eea, #764ba2); color: white; border-radius: 30px; font-size: 1.3rem; font-weight: 700; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                            GPA: 85
+                        </span>
+                    </div>
+                    
+                    <h4 style="color: #2d3748; font-size: 1.2rem; margin-bottom: 1.5rem; text-align: center;">Academic Performance:</h4>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="grade-item">
+                                <span style="color: #666;">Deep Learning & Image Understanding</span>
+                                <span class="grade-number">92</span>
+                            </div>
+                            <div class="grade-item">
+                                <span style="color: #666;">Computer Vision</span>
+                                <span class="grade-number">96</span>
+                            </div>
+                            <div class="grade-item">
+                                <span style="color: #666;">Intro to CS (Java)</span>
+                                <span class="grade-number">97</span>
+                            </div>
                         </div>
-                        <h3 class="h5 text-muted">Reichman University</h3>
-                        <p class="card-text">
-                            B.Sc. in Computer Science<br>
-                            IDC Herzliya, 2021 - 2024
-                        </p>
+                        <div class="col-md-6">
+                            <div class="grade-item">
+                                <span style="color: #666;">Operating Systems</span>
+                                <span class="grade-number">100</span>
+                            </div>
+                            <div class="grade-item">
+                                <span style="color: #666;">From Idea to App Using AI tools</span>
+                                <span class="grade-number">100</span>
+                            </div>
+                            <div class="grade-item">
+                                <span style="color: #666;">Computer Networks</span>
+                                <span class="grade-number">99</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100 shadow-sm hover-card">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-laptop-code fa-2x text-primary me-3"></i>
-                            <h2 class="card-title h3 mb-0">Experience</h2>
-                        </div>
-                        <h3 class="h5 text-muted">milab - Media Innovation Lab</h3>
-                        <p class="card-text">
-                            IoT Software Developer<br>
-                            Dec 2023 - Present<br>
-                            Developing innovative IoT solutions.
-                        </p>
+            
+            <!-- High School - Smaller -->
+            <div class="mb-4">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #764ba2;">
+                    <h4 style="color: #764ba2; font-weight: 700; margin-bottom: 0.8rem;">
+                        📚 Katzenelson High School
+                    </h4>
+                    <p style="color: #666; margin-bottom: 0.8rem; font-size: 0.95rem; line-height: 1.6;">
+                        <strong>Full Matriculation with 5 Units Extension in:</strong>
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span style="padding: 5px 12px; background: #764ba2; color: white; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
+                            💻 Computer Science
+                        </span>
+                        <span style="padding: 5px 12px; background: #764ba2; color: white; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
+                            🔬 Physics
+                        </span>
+                        <span style="padding: 5px 12px; background: #764ba2; color: white; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
+                            📐 Mathematics
+                        </span>
+                        <span style="padding: 5px 12px; background: #764ba2; color: white; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
+                            🌍 English
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card h-100 shadow-sm hover-card">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-hands-helping fa-2x text-primary me-3"></i>
-                            <h2 class="card-title h3 mb-0">Volunteering</h2>
-                        </div>
-                        <h3 class="h5 text-muted">JA Worldwide</h3>
-                        <p class="card-text">
-                            Business Mentor<br>
-                            Oct 2022 - Jun 2023<br>
-                            Mentored "Greenies", the first global Upcycling culture promotion platform.
+            
+            <!-- Volunteering Section -->
+            <div class="greenies-section mt-5">
+                <h2 class="text-center mb-4" style="font-weight: 700; font-size: 2rem;">
+                    🌱 Volunteering & Social Impact
+                </h2>
+                
+                <div style="background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <h3 style="font-weight: 700; margin-bottom: 1rem;">
+                        JA Worldwide - Young Entrepreneurs Israel
+                    </h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                        <strong>Business Mentor | Oct 2022 - Jun 2023</strong>
+                    </p>
+                    <p style="line-height: 1.8; margin-bottom: 2rem;">
+                        I participated in the organization of Young Entrepreneurs Israel, mentoring the company <strong>"Fire Monkeys"</strong> 
+                        in developing their groundbreaking project.
+                    </p>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                        <h4 style="font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem;">💚 "Greenies" Platform</h4>
+                        <p style="font-size: 1.1rem; line-height: 1.8;">
+                            <strong>The first Upcycling culture promotion platform in Israel and the world.</strong>
                         </p>
+                        
+                        <h5 style="font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">What is Upcycling?</h5>
+                        <p style="line-height: 1.8;">
+                            Upcycling is the process of taking something no longer in use and giving it a new life and function. 
+                            Most people are not aware of the varied possibilities of Upcycling, spending many hours searching for ideas. 
+                            This is discouraging, and usually, because of the lack of accessible information, people just give up...
+                        </p>
+                        
+                        <h5 style="font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">Our Solution</h5>
+                        <p style="line-height: 1.8; margin-bottom: 2rem;">
+                            An ecosystem - a growing community of Greenies that introduces the public to the Upcycling concept 
+                            and allows environmental enthusiasts to dive deeper into the matter.
+                        </p>
+                        
+                        <h5 style="font-weight: 600; margin-bottom: 1rem;">🏆 Achievements:</h5>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 2rem;">
+                            <span class="achievement-badge">🥇 First Place - Hackathon Manpower Israel</span>
+                            <span class="achievement-badge">🥈 Second Place - Dan & Hasharon Regional Competition</span>
+                            <span class="achievement-badge">🥉 Third Place - National Competition</span>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <img src="images/1686163419367.jpeg" alt="Team Achievement" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="images/1686163418739.jpeg" alt="Project Presentation" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <div style="height: 80px;"></div>
 </section>
     </div>
 

@@ -77,25 +77,242 @@
         
         <div class="clear"></div>
         <div class="clear"></div>
+        
+        <style>
+            .resume-hero {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                padding: 80px 0;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .resume-hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/><rect fill="rgba(255,255,255,0.05)" x="50" y="50" width="50" height="50"/></svg>');
+                opacity: 0.3;
+            }
+            
+            .resume-content {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .resume-title {
+                color: white;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            }
+            
+            .resume-subtitle {
+                color: rgba(255,255,255,0.9);
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .cv-card {
+                background: white;
+                border-radius: 20px;
+                padding: 3rem;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+                margin-top: -50px;
+                position: relative;
+                z-index: 2;
+            }
+            
+            .cv-preview {
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                transition: transform 0.3s ease;
+                margin-bottom: 2rem;
+            }
+            
+            .cv-preview:hover {
+                transform: scale(1.02);
+            }
+            
+            .download-btn {
+                background: linear-gradient(45deg, #667eea, #764ba2);
+                border: none;
+                padding: 15px 40px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: white;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .download-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+                color: white;
+            }
+            
+            .download-icon {
+                font-size: 1.3rem;
+            }
+            
+            .experience-image {
+                border-radius: 20px;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+                margin-top: 3rem;
+                transition: transform 0.3s ease;
+            }
+            
+            .experience-image:hover {
+                transform: scale(1.02);
+            }
+            
+            .stats-container {
+                display: flex;
+                justify-content: space-around;
+                margin: 2rem 0;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+            
+            .stat-item {
+                text-align: center;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+                font-weight: 700;
+                background: linear-gradient(45deg, #667eea, #764ba2);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .stat-label {
+                color: #666;
+                font-size: 1rem;
+                margin-top: 0.5rem;
+            }
+            
+            @media (max-width: 768px) {
+                .resume-title {
+                    font-size: 2rem;
+                }
+                
+                .cv-card {
+                    padding: 2rem 1rem;
+                }
+            }
+        </style>
+        
         <section id="INTRO"> 
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">  
-                <div class="p-xxl-4 text-center bg-body-tertiary">
-                  <div class="container py-5">
-                    <h1 class="text-body-emphasis">My Resume</h1>
-                    <img src="./images/CV_almog.png" alt="PDF Preview" width="350" >
-                    <div class="clear"></div>
-                    <div>
-                      <button onclick="window.open('./images/Almog_cv.pdf')" class="btn btn-primary d-inline-flex justify-content-center">Download CV</button>
-                    </div>
-                    <div class=" align-items-center pading">
-                        <img src="images\job (1).jpeg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-                      </div>
-                  </div>
+            <!-- Hero Section -->
+            <div class="resume-hero">
+                <div class="container resume-content text-center">
+                    <h1 class="resume-title">My Professional Journey</h1>
+                    <p class="resume-subtitle">Computer Science Student | Technology Enthusiast | Problem Solver</p>
                 </div>
-               </div>
             </div>
-        </div>
+            
+            <!-- CV Section -->
+            <div class="container">
+                <div class="cv-card">
+                    <div class="row align-items-center mb-5">
+                        <div class="col-lg-6 text-center">
+                            <img src="./images/CV_almog.png" alt="Almog Arazi Resume" class="img-fluid cv-preview" style="max-width: 450px;">
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <h2 class="mb-4" style="color: #2d3748; font-weight: 700;">Professional Experience</h2>
+                            <p style="color: #666; font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                                Explore my journey in computer vision, IoT development, and algorithm design
+                            </p>
+                            <button onclick="window.open('./images/Almog_cv.pdf')" class="download-btn">
+                                <span class="download-icon">📄</span>
+                                Download Full CV
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Timeline -->
+                    <div class="mt-5 pt-5" style="border-top: 2px solid #f0f0f0;">
+                        <h3 class="text-center mb-5" style="color: #2d3748; font-weight: 700; font-size: 2rem;">Work Experience</h3>
+                        
+                        <!-- Pumba - Computer Vision Engineer -->
+                        <div class="experience-item mb-5 pb-5" style="border-bottom: 2px solid #f0f0f0;">
+                            <div class="row align-items-start">
+                                <div class="col-lg-3 mb-3">
+                                    <div class="company-logo" style="background: #000; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        <img src="images/pumba.jpeg" alt="Pumba Logo" style="max-width: 100%; height: auto;">
+                                    </div>
+                                    <p style="color: #666; margin-top: 15px; font-size: 0.9rem; font-weight: 600;">Nov 2024 - Present</p>
+                                    <p style="color: #999; font-size: 0.85rem;">1 year</p>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h4 style="color: #2d3748; font-weight: 700;">Computer Vision Engineer</h4>
+                                    <p style="color: #764ba2; font-weight: 600; margin-bottom: 15px;">Algorithm Development | Neural Networks | Deep Learning | Python</p>
+                                    <ul style="color: #666; line-height: 1.8;">
+                                        <li>Developed neural network algorithms for computer vision applications</li>
+                                        <li>Designed and implemented deep learning models using Python (PyTorch, TensorFlow, OpenCV)</li>
+                                        <li>Researched and implemented state-of-the-art computer vision algorithms including Vision Transformers (ViT) and CNN architectures</li>
+                                        <li>Developed camera calibration systems for accurate 3D measurements</li>
+                                        <li>Optimized model accuracy and performance for real-world deployment</li>
+                                    </ul>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mb-3">
+                                            <img src="images/vit.png" alt="Vision Transformers vs CNNs" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <img src="images/calibaration.png" alt="Camera Calibration" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- MiLab - IoT Developer -->
+                        <div class="experience-item mb-4">
+                            <div class="row align-items-start">
+                                <div class="col-lg-3 mb-3">
+                                    <div class="company-logo" style="background: #fff; padding: 30px; border-radius: 15px; text-align: center; border: 2px solid #f0f0f0; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+                                        <img src="images/milab.jpeg" alt="MiLab Logo" style="max-width: 100%; height: auto;">
+                                    </div>
+                                    <p style="color: #666; margin-top: 15px; font-size: 0.9rem; font-weight: 600;">Dec 2023 - Jun 2024</p>
+                                    <p style="color: #999; font-size: 0.85rem;">7 months</p>
+                                </div>
+                                <div class="col-lg-9">
+                                    <h4 style="color: #2d3748; font-weight: 700;">IoT Software Developer</h4>
+                                    <p style="color: #f5576c; font-weight: 600; margin-bottom: 15px;">Human-Computer Interaction Project</p>
+                                    <ul style="color: #666; line-height: 1.8;">
+                                        <li>Developed the "Peekaboo" smart car mirror product from ideation to MVP</li>
+                                        <li>Managed hardware integration with Raspberry Pi 4 and designed 3D printed components</li>
+                                        <li>Implemented Gaze Direction Estimation Algorithm using computer vision</li>
+                                        <li>Built full-stack IoT solution combining hardware sensors, CV algorithms, and user interface</li>
+                                    </ul>
+                                    <div class="row mt-3">
+                                        <div class="col-md-4 mb-3">
+                                            <img src="images/Screenshot 2025-10-25 at 17.53.12.png" alt="Peekaboo Hardware" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <img src="images/Screenshot 2025-10-25 at 17.53.32.png" alt="Peekaboo Device" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <img src="images/Screenshot 2025-10-25 at 17.53.54.png" alt="Team Photo" class="img-fluid" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="height: 80px;"></div>
     </section>
     <footer class="gradient-background">
         <!-- LinkedIn -->
