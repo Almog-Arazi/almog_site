@@ -324,25 +324,29 @@
 
             /* Featured Projects Carousel */
             .featured-projects-section {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(300deg, #00bfff31, #f1eff0, #1683ff38);
+                background-size: 180% 180%;
+                animation: gradient-animation 18s ease infinite;
+                background-color: #ffffffce;
                 padding: 80px 0;
                 position: relative;
                 overflow: hidden;
             }
 
-            .featured-projects-section::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/><rect fill="rgba(255,255,255,0.05)" x="50" y="50" width="50" height="50"/></svg>');
-                opacity: 0.3;
+            @keyframes gradient-animation {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
             }
 
             .featured-title {
-                color: white;
+                color: #2d3748;
                 font-size: 2.5rem;
                 font-weight: 700;
                 text-align: center;
@@ -356,7 +360,7 @@
                 display: block;
                 width: 200px;
                 height: 5px;
-                background: rgba(255,255,255,0.8);
+                background: linear-gradient(90deg, #007bff, #00d4ff);
                 margin: 20px auto 0;
                 border-radius: 3px;
             }
@@ -451,17 +455,19 @@
 
             .swiper-button-next,
             .swiper-button-prev {
-                color: white !important;
-                background: rgba(255,255,255,0.2);
+                color: #007bff !important;
+                background: rgba(255,255,255,0.8);
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
                 backdrop-filter: blur(10px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             }
 
             .swiper-button-next:hover,
             .swiper-button-prev:hover {
-                background: rgba(255,255,255,0.3);
+                background: rgba(255,255,255,1);
+                box-shadow: 0 6px 20px rgba(0,123,255,0.3);
             }
 
             .swiper-button-next::after,
@@ -470,7 +476,7 @@
             }
 
             .swiper-pagination-bullet {
-                background: white !important;
+                background: #007bff !important;
                 opacity: 0.5;
             }
 
