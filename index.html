@@ -134,24 +134,24 @@
 
             .contact-section {
                 background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
-                padding: 80px 0;
+                padding: 50px 0;
             }
 
             .contact-wrapper {
-                max-width: 1000px;
+                max-width: 700px;
                 margin: 0 auto;
             }
 
             .contact-card {
                 background: white;
-                border-radius: 20px;
-                padding: 3rem;
+                border-radius: 15px;
+                padding: 2rem;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
 
             .section-title {
                 color: #2d3748;
-                font-size: 2.5rem;
+                font-size: 1.8rem;
                 font-weight: 700;
                 position: relative;
             }
@@ -159,40 +159,40 @@
             .section-title::after {
                 content: '';
                 position: absolute;
-                bottom: -15px;
+                bottom: -10px;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 100px;
-                height: 4px;
+                width: 80px;
+                height: 3px;
                 background: linear-gradient(90deg, #007bff, #00d4ff);
                 border-radius: 2px;
             }
 
             .contact-image-wrapper {
                 text-align: center;
-                margin-bottom: 2rem;
+                margin-bottom: 1.2rem;
             }
 
             .contact-image {
-                max-width: 300px;
+                max-width: 200px;
                 height: auto;
-                border-radius: 15px;
+                border-radius: 12px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             }
 
             .contact-form {
-                max-width: 600px;
+                max-width: 100%;
                 margin: 0 auto;
             }
 
             .form-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
 
             .form-group {
-                margin-bottom: 1.5rem;
+                margin-bottom: 0;
             }
 
             .form-group.full-width {
@@ -201,9 +201,10 @@
 
             .form-label {
                 display: block;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.4rem;
                 color: #4a5568;
                 font-weight: 500;
+                font-size: 0.9rem;
             }
 
             .input-group {
@@ -212,18 +213,19 @@
 
             .input-icon {
                 position: absolute;
-                left: 1rem;
+                left: 0.8rem;
                 top: 50%;
                 transform: translateY(-50%);
                 color: #a0aec0;
+                font-size: 0.9rem;
             }
 
             .form-control {
                 width: 100%;
-                padding: 0.75rem 1rem 0.75rem 2.5rem;
+                padding: 0.6rem 0.8rem 0.6rem 2.2rem;
                 border: 2px solid #e2e8f0;
-                border-radius: 10px;
-                font-size: 1rem;
+                border-radius: 8px;
+                font-size: 0.95rem;
                 transition: all 0.3s ease;
             }
 
@@ -234,18 +236,18 @@
             }
 
             textarea.form-control {
-                min-height: 120px;
+                min-height: 90px;
                 resize: vertical;
             }
 
             .submit-button {
                 width: 100%;
-                padding: 1rem 2rem;
+                padding: 0.7rem 1.5rem;
                 border: none;
-                border-radius: 10px;
+                border-radius: 8px;
                 background: linear-gradient(45deg, #007bff, #00d4ff);
                 color: white;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 font-weight: 600;
                 display: flex;
                 align-items: center;
@@ -270,7 +272,7 @@
 
             @media (max-width: 768px) {
                 .contact-card {
-                    padding: 2rem;
+                    padding: 1.5rem;
                 }
 
                 .form-grid {
@@ -282,7 +284,7 @@
                 }
 
                 .section-title {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
             }
               .popup-message {
@@ -585,11 +587,11 @@
     </div>
   
     
-    <section class="contact-section py-5">
+    <section class="contact-section">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-card">
-                    <h2 class="section-title text-center mb-5">Get In Touch</h2>
+                    <h2 class="section-title text-center mb-3">Get In Touch</h2>
                     
                     <div class="contact-content">
                         <div class="contact-image-wrapper">
@@ -618,7 +620,7 @@
                                     <label class="form-label" for="message">Message</label>
                                     <div class="input-group">
                                         <i class="fas fa-comment-alt input-icon"></i>
-                                        <textarea class="form-control" rows="4" name="message" id="message" placeholder="What would you like to tell me?" required></textarea>
+                                        <textarea class="form-control" rows="3" name="message" id="message" placeholder="What would you like to tell me?" required></textarea>
                                     </div>
                                 </div>
                         
